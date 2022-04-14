@@ -1,11 +1,17 @@
 import "./App.css";
+import Options from "./pages/entry/Options";
 import SummaryForm from "./pages/summary/SummaryForm";
+import { Container } from "react-bootstrap";
+import { useState } from "react";
 
 function App() {
+  const [orderPhase, setOrderPhase] = useState("in progress");
+
   return (
-    <div className="App">
+    <Container className="App">
+      <Options />
       <SummaryForm />
-    </div>
+    </Container>
   );
 }
 
