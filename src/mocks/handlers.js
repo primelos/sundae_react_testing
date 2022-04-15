@@ -1,4 +1,4 @@
-import { setupWorker, rest } from "msw";
+import { rest } from "msw";
 
 export const handlers = [
   // Handles a GET /user request
