@@ -25,7 +25,8 @@ const Options = ({ optionType }) => {
   }
 
   const ItemComponent = optionType === "scoops" ? ScoopOptions : ToppingOptions;
-  const title = optionType === "scoops" ? "Scoops" : "Toppings";
+
+  const title = optionType[0].toUpperCase() + optionType.slice(1).toLowerCase();
 
   const optionItems = items.map((item) => {
     return (
@@ -45,7 +46,7 @@ const Options = ({ optionType }) => {
       <h2>{title}</h2>
       <p>{pricePerItem[optionType]} each</p>
       <p>
-        {title} total:{orderDetails.totals[optionType]}
+        {title} total: {orderDetails.totals[optionType]}
       </p>
       <Row>{optionItems}</Row>
     </>
