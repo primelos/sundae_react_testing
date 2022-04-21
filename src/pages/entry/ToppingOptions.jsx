@@ -1,7 +1,7 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 
-const ToppingOptions = ({ name, imagePath }) => {
+const ToppingOptions = ({ name, imagePath, updateItemCount }) => {
   return (
     <Col>
       <img
