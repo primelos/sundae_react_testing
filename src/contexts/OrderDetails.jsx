@@ -34,6 +34,7 @@ export function OrderDetailsProvider(props) {
     toppings: zeroCurrency,
     grandTotal: zeroCurrency,
   });
+  console.log("zeroCurrency", totals);
 
   const calculateSubtotal = (optionType, optionCounts) => {
     let optionCount = 0;
