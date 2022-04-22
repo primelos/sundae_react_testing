@@ -8,6 +8,7 @@ import { pricePerItem } from "../../constants";
 import { useOrderDetails } from "../../contexts/OrderDetails";
 
 const Options = ({ optionType }) => {
+  console.log("optionType", optionType);
   const [items, setItems] = useState([]);
   const [error, setError] = useState(false);
 
@@ -25,7 +26,6 @@ const Options = ({ optionType }) => {
   }
 
   const ItemComponent = optionType === "scoops" ? ScoopOptions : ToppingOptions;
-
   const title = optionType[0].toUpperCase() + optionType.slice(1).toLowerCase();
 
   const optionItems = items.map((item) => {
